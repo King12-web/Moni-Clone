@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moniepoint</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="policy">
+      <p>
+        This website uses cookies to enhance your experience. Learn more here:
+      </p>
+      <span><b>Privacy Policy</b></span>
+      <span><b>Cookie Policy</b></span>
+    </div>
+
+    <header>
+        <div class="nav-overlay" id="navOverlay"></div>
+        <img src="https://moniepoint.com/logo-mfb-white.png" alt="logo" />
+        <div class="toggle">
+          <a href="#" class="h-1">Business</a>
+          <a href="#" class="h-2">Personal</a>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li class="drop">
+            <span>Products <i class="arrow"></i></span>
+            <div class="dropdown mega">
+              <div class="mega-left">
+                <div class="cat active" data-cat="banking">
+                  <strong>Banking</strong>
+                  <p>Business and personal banking accounts</p>
+                </div>
+                <div class="cat" data-cat="credit">
+                  <strong>Credit</strong>
+                  <p>Business and individual loans</p>
+                </div>
+                <div class="cat" data-cat="payments">
+                  <strong>Payments</strong>
+                  <p>Accept payments from anywhere</p>
+                </div>
+                <div class="cat" data-cat="mgmt">
+                  <strong>Business Management</strong>
+                  <p>Easy business money management & reports</p>
+                </div>
+              </div>
+
+              <div class="mega-right">
+                <div class="cat-panel active" data-panel="banking">
+                  <a href="#" class="prod-item">
+                    <span class="icon icon-blue"></span>
+                    <span class="txt">
+                      <strong>Business Account</strong>
+                      <small
+                        >Get a free bank account to power your business</small
+                      >
+                    </span>
+                  </a>
+                  <a href="#" class="prod-item">
+                    <span class="icon icon-green"></span>
+                    <span class="txt">
+                      <strong>Savings</strong>
+                      <small
+                        >Save for your business goals and earn up to 17.5%
+                        interest p.a.</small
+                      >
+                    </span>
+                  </a>
+                </div>
+
+                <div class="cat-panel" data-panel="credit">
+                  <a href="#" class="prod-item">
+                    <span class="icon icon-blue"></span>
+                    <span class="txt">
+                      <strong>Working Capital Loans</strong>
+                      <small>Flexible loans that help your business grow</small>
+                    </span>
+                  </a>
+                  <a href="#" class="prod-item disabled">
+                    <span class="icon icon-teal"></span>
+                    <span class="txt">
+                      <strong
+                        >Overdraft <em class="badge">Coming soon</em></strong
+                      >
+                      <small
+                        >Keep your business going, even when money is
+                        low.</small
+                      >
+                    </span>
+                  </a>
+                  <a href="#" class="prod-item disabled">
+                    <span class="icon icon-amber"></span>
+                    <span class="txt">
+                      <strong
+                        >Salary Advance
+                        <em class="badge">Coming soon</em></strong
+                      >
+                      <small>Provide salary advance for your employees.</small>
+                    </span>
+                  </a>
+                </div>
+
+                <div class="cat-panel" data-panel="payments">
+                  <a href="#" class="prod-item">
+                    <span class="icon icon-blue"></span>
+                    <span class="txt">
+                      <strong>Point of Sale Terminal</strong>
+                      <small
+                        >Accept card and transfer payments seamlessly</small
+                      >
+                    </span>
+                  </a>
+                </div>
+
+                <div class="cat-panel" data-panel="mgmt">
+                  <a href="#" class="prod-item">
+                    <span class="icon icon-blue"></span>
+                    <span class="txt">
+                      <strong>Moniebook</strong>
+                      <small
+                        >Manage bookkeeping, inventory, POS, payments,
+                        CRM</small
+                      >
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="drop">
+            <span>Company <i class="arrow"></i></span>
+            <div class="dropdown">
+              <a href="#">Culture</a>
+              <a href="#">Careers</a>
+              <a href="#">Press</a>
+            </div>
+          </li>
+
+          <li><a href="#" class="plain-link">About</a></li>
+          <li><a href="#" class="plain-link">Contact</a></li>
+          <li><a href="#" class="plain-link">Blog</a></li>
+        </ul>
+         <button class="nav-close" aria-label="Close menu">&times;</button>
+    </nav>
+
+      <div class="head-right">
+        <a href="#" class="signin">Sign in</a>
+        <button class="region-btn" id="regionBtn" aria-label="Select region">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.6" />
+            <path
+              d="M3 12h18M12 3c2.5 2.7 4 6 4 9s-1.5 6.3-4 9c-2.5-2.7-4-6-4-9s1.5-6.3 4-9z"
+              stroke="#fff"
+              stroke-width="1.6"
+            />
+          </svg>
+        </button>
+        <button class="burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Region modal -->
+      <div class="modal-overlay" id="regionModal">
+        <div class="modal-box">
+          <div class="modal-head">
+            <span>Select Region/Country</span>
+            <button class="modal-close" id="modalClose">&times;</button>
+          </div>
+          <ul class="region-list">
+            <li>
+              <img src="https://moniepoint.com/flags/gb.svg" alt="" /> Global
+            </li>
+            <li>
+              <img src="https://moniepoint.com/flags/nig.svg" alt="" /> Nigeria
+            </li>
+            <li>
+              <img src="https://moniepoint.com/flags/ken.svg" alt="" /> Kenya
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="hero">
+        <div class="hero-i">
+          <span class="hero-badge">
+            <i class="fa-solid fa-certificate"></i>
+            Africa's fastest growing financial Institution 2023-2025
+          </span>
+          <h1 class="hero-title">Simple solutions to</h1>
+          <h1 class="hero-title hero-title-accent">power your business</h1>
+          <p class="hero-desc">
+            Collect payments, access loans and manage operations with a business
+            banking solution that meets all your needs.
+          </p>
+          <button class="hero-btn">
+            Open an account <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <p class="hero-license">
+            We are licensed by
+            <img
+              class="license-logo"
+              src="https://lh3.googleusercontent.com/d/1VIlBQqAq-1mOcJ1T6Djis1VqcZWgAJdM=w1000?authuser=0"
+              alt="license logo"
+            />
+            and insured by
+            <img
+              class="insured-logo"
+              src="https://lh3.googleusercontent.com/d/1FtA17SsYTq3ZFIl2Y_q2U6ZzLIfeaVvn=w1000?authuser=0"
+              alt="insurance logo"
+            />
+          </p>
+        </div>
+        <div class="hero-ii">
+          <img
+            src="https://moniepoint.com/business/hero-sub.png"
+            alt="Business app preview"
+          />
+        </div>
+      </div>
+      <div class="hero-1">
+        <div class="upper">
+          <h2 class="txt">
+            Businesses that <br />
+            counts on us
+          </h2>
+          <p>
+            Join <b>5 million</b> business owners on the Moniepoint <br />
+            platform
+          </p>
+          <h2 class="img-txt">5m+</h2>
+        </div>
+        <div class="animation">
+          <div class="ani-wrap">
+            <div class="brand-card">
+              <img src="media/biz-1.png" alt="brand 1" />
+            </div>
+            <div class="brand-card">
+              <img src="https://moniepoint.com/ng/biz-7.png" alt="brand 2" />
+            </div>
+            <div class="brand-card">
+              <img src="https://moniepoint.com/ng/biz-8.png" alt="brand 3" />
+            </div>
+            <div class="brand-card">
+              <img src="https://moniepoint.com/ng/biz-1.png" alt="brand 4" />
+            </div>
+            <div class="brand-card">
+              <img src="https://moniepoint.com/ng/biz-2.png" alt="brand 5" />
+            </div>
+            <div class="brand-card">
+              <img src="https://moniepoint.com/ng/biz-3.png" alt="brand 6" />
+            </div>
+            <div class="brand-card">
+              <img src="media/biz-7.png" alt="brand 7" />
+            </div>
+            <div class="brand-card">
+              <img src="media/biz-8.png" alt="brand 8" />
+            </div>
+
+            <div class="brand-card" aria-hidden="true">
+              <img src="media/biz-1.png" alt="" />
+            </div>
+            <div class="brand-card" aria-hidden="true">
+              <img src="https://moniepoint.com/ng/biz-7.png" alt="" />
+            </div>
+            <div class="brand-card" aria-hidden="true">
+              <img src="https://moniepoint.com/ng/biz-8.png" alt="" />
+            </div>
+            <div class="brand-card" aria-hidden="true">
+              <img src="https://moniepoint.com/ng/biz-1.png" alt="" />
+            </div>
+            <div class="brand-card" aria-hidden="true">
+              <img src="https://moniepoint.com/ng/biz-2.png" alt="" />
+            </div>
+            <div class="brand-card" aria-hidden="true">
+              <img src="https://moniepoint.com/ng/biz-3.png" alt="" />
+            </div>
+            <div class="brand-card" aria-hidden="true">
+              <img src="media/biz-7.png" alt="" />
+            </div>
+            <div class="brand-card" aria-hidden="true">
+              <img src="media/biz-8.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
