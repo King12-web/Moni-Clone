@@ -61,7 +61,7 @@
               <div class="mega-right">
                 <div class="cat-panel active" data-panel="banking">
                   <a href="#" class="prod-item">
-                    <span class="icon icon-blue"></span>
+                    <span class="icon icon-blue"><i class="fa-regular fa-building" style="font-size: 15px;"></i></span>
                     <span class="txt">
                       <strong>Business Account</strong>
                       <small
@@ -70,7 +70,16 @@
                     </span>
                   </a>
                   <a href="#" class="prod-item">
-                    <span class="icon icon-green"></span>
+                    <span class="icon icon-yellow"><i class="fa-solid fa-hashtag" style="font-size: 15px;"></i></span>
+                    <span class="txt">
+                      <strong>USSD</strong>
+                      <small
+                        >Dial *5573# for easy offline banking</small
+                      >
+                    </span>
+                  </a>
+                  <a href="#" class="prod-item">
+                    <span class="icon icon-green"><i class="fa-solid fa-piggy-bank" style="font-size: 15px;"></i></span>
                     <span class="txt">
                       <strong>Savings</strong>
                       <small
@@ -83,14 +92,14 @@
 
                 <div class="cat-panel" data-panel="credit">
                   <a href="#" class="prod-item">
-                    <span class="icon icon-blue"></span>
+                    <span class="icon icon-blue"><i class="fa-solid fa-hand-holding-dollar"></i></span>
                     <span class="txt">
                       <strong>Working Capital Loans</strong>
                       <small>Flexible loans that help your business grow</small>
                     </span>
                   </a>
                   <a href="#" class="prod-item disabled">
-                    <span class="icon icon-teal"></span>
+                    <span class="icon icon-teal"><i class="fa-solid fa-money-bill"></i></span>
                     <span class="txt">
                       <strong
                         >Overdraft <em class="badge">Coming soon</em></strong
@@ -102,7 +111,7 @@
                     </span>
                   </a>
                   <a href="#" class="prod-item disabled">
-                    <span class="icon icon-amber"></span>
+                    <span class="icon icon-amber"><i class="fa-solid fa-money-bill"></i></span>
                     <span class="txt">
                       <strong
                         >Salary Advance
@@ -115,19 +124,45 @@
 
                 <div class="cat-panel" data-panel="payments">
                   <a href="#" class="prod-item">
-                    <span class="icon icon-blue"></span>
+                    <span class="icon icon-blue"><i class="fa-solid fa-calculator"></i></span>
                     <span class="txt">
-                      <strong>Point of Sale Terminal</strong>
+                      <strong>POS Terminals</strong>
                       <small
-                        >Accept card and transfer payments seamlessly</small
+                        >Accept card and transfer payments with the Moniepoint POS Terminal.</small
                       >
                     </span>
                   </a>
+                  <a href="#" class="prod-item">
+                    <span class="icon icon-blue"><i class="fa-brands fa-magento"></i></span>
+                    <span class="txt">
+                      <strong>Web Payments (Monnify)</strong>
+                      <small
+                        >Collect web payments with ease using Monnify.</small
+                      >
+                    </span>
                 </div>
 
                 <div class="cat-panel" data-panel="mgmt">
                   <a href="#" class="prod-item">
-                    <span class="icon icon-blue"></span>
+                    <span class="icon icon-blue"><i class="fa-regular fa-credit-card"></i></span>
+                    <span class="txt">
+                      <strong>Expense Cards</strong>
+                      <small
+                        >Get a secure card for your business expenses</small
+                      >
+                    </span>
+                  </a>
+                  <a href="#" class="prod-item">
+                    <span class="icon icon-blue"><i class="fa-regular fa-address-card"></i></span>
+                    <span class="txt">
+                      <strong>CAC Registeration</strong>
+                      <small
+                        >Easily register your business name via our banking dashboard and get CAC approved in 14 days.</small
+                      >
+                    </span>
+                  </a>
+                  <a href="#" class="prod-item">
+                    <span class="icon icon-blue"><i class="fa-solid fa-book-bookmark"></i></span>
                     <span class="txt">
                       <strong>Moniebook</strong>
                       <small
@@ -158,7 +193,7 @@
     </nav>
 
       <div class="head-right">
-        <a href="#" class="signin">Sign in</a>
+        <a href="#" class="signin">Sign in <i class="fa-solid fa-arrow-right"></i></a>
         <button class="region-btn" id="regionBtn" aria-label="Select region">
           <svg
             viewBox="0 0 24 24"
@@ -171,6 +206,7 @@
               stroke="#fff"
               stroke-width="1.6"
             />
+            <i class="fa-solid fa-chevron-down" style="color: white; font-size: 12px;"></i>
           </svg>
         </button>
         <button class="burger" aria-label="Open menu">
@@ -183,7 +219,7 @@
         <div class="modal-box">
           <div class="modal-head">
             <span>Select Region/Country</span>
-            <button class="modal-close" id="modalClose">&times;</button>
+            <button class="modal-close" id="modalClose"><i class="fa-solid fa-x"></i></button>
           </div>
           <ul class="region-list">
             <li>
@@ -304,6 +340,19 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="mid">
+        <h2 class="head-child">All the tools you need to run your <br> business with ease</h2>
+
+        <div class="section-tabs" id="section-tabs">
+          <a href="#Business"  class="stab active">Business Account</a>
+          <a href="#POS" class="stab">Point of Sale Terminal</a>
+          <a href="#Expense"     class="stab">Expense Card</a>
+          <a href="#Capital"      class="stab">Working Capital Loans</a>
+          <a href="#Savings" class="stab">Business Savings</a>
+          <a href="#Moniebook" class="stab">Moniebook</a>
+        </div>
     </section>
 
     <script

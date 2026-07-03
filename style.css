@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 body {
-  background: #f6f9fd;
+  background: #f5f8fc;
   overflow-x: hidden;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 /* ===== Cookie policy bar ===== */
@@ -75,7 +75,6 @@ header img {
 }
 .toggle {
   display: flex;
-  background: rgba(255, 255, 255, 0.08);
   border-radius: 30px;
   padding: 3px;
   gap: 4px;
@@ -136,6 +135,7 @@ nav {
 .nav-links li > span:hover,
 .plain-link:hover {
   background: rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
 }
 
 .arrow {
@@ -151,9 +151,12 @@ nav {
 }
 
 /* simple dropdown (Company) */
+.drop{
+  position: relative;
+}
 .dropdown {
-  position: fixed;
-  top: 120px;
+  position: absolute;
+  top: 100%;
   left: 20px;
   background: #fff;
   border-radius: 0 0 12px 12px;
@@ -263,24 +266,54 @@ nav {
   margin-top: 2px;
 }
 .icon-blue {
-  background: #0357ee;
+  background: #c4e9fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .icon-green {
-  background: #16a34a;
+  background: #c4e9fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-yellow{
+  background: #c4e9fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-blue:hover{
+  background: #347ef1;
+}
+.icon-green:hover{
+  background: #347ef1;
+}
+.icon-yellow:hover{
+  background: #347ef1;
 }
 .icon-teal {
-  background: #0ea5a5;
+  background: #c4e9fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .icon-amber {
-  background: #f5b72f;
+  background: #c4e9fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .prod-item .txt strong {
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: #0357ee;
-  font-weight: 600;
+  color: black;
+  font-weight: 700;
+}
+.prod-item .txt strong:hover{
+  color: #347ef1;
 }
 .prod-item.disabled .txt strong {
   color: #031335;
@@ -309,17 +342,14 @@ nav {
   gap: 14px;
 }
 .signin {
-  background: #0357ee;
-  color: #fff;
+  background: #c4e9fd;
+  color: #192e48;
   text-decoration: none;
   padding: 8px 18px;
   border-radius: 30px;
   font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
-}
-.signin:hover {
-  background: #0244bf;
 }
 .burger {
   display: none;
@@ -336,10 +366,11 @@ nav {
   margin: 5px 0;
 }
 .region-btn {
-  width: 36px;
-  height: 36px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
+  /* background: rgba(255, 255, 255, 0.08); */
+  background: #031335;
   border: none;
   display: flex;
   align-items: center;
@@ -348,7 +379,7 @@ nav {
   flex-shrink: 0;
 }
 .region-btn:hover {
-  background: rgba(255, 255, 255, 0.16);
+  /* background: rgba(255, 255, 255, 0.16); */
 }
 .region-btn svg {
   width: 18px;
@@ -444,6 +475,7 @@ nav {
   z-index: 10;
   padding: clamp(16px, 4vw, 28px);
   min-height: clamp(240px, 40vh, 50dvh);;
+  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.20);
 }
 
 .hero-i {
@@ -593,6 +625,58 @@ nav {
     }
 }
 
+.mid{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  padding: 5rem 1.25rem; /* top and bottom spacing */
+  min-height: auto;      /* let content decide height */
+}
+.head-child{
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  color: #092256;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+.section-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  backdrop-filter: blur(10px);
+  display: flex;
+  gap: 10px;
+  /* border-bottom: 1px solid #1E2330; */
+  padding: 15px;
+  width: 95%;
+  border-radius: 20px;
+  height: 80px;
+  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.20);
+}
+
+.stab {
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #8891A8;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all .2s;
+  white-space: nowrap;
+}
+.section-tabs a{
+  font-size: 16px;
+  font-family: Arial;
+  font-weight: 500;
+}
+.stab.active {
+  /* color: #C9A84C; */
+  /* border-bottom-color: #C9A84C; */
+}
+
 
 /* ===== Responsive breakpoints ===== */
 
@@ -702,6 +786,9 @@ nav {
   .nav-overlay.open {
     opacity: 1;
     pointer-events: auto;
+  }
+  .section-tabs{
+    display: none;
   }
 }
 
