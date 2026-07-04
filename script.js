@@ -7,6 +7,7 @@ document.querySelectorAll('.mega-left .cat').forEach(cat => {
     document.querySelector(`.cat-panel[data-panel="${key}"]`).classList.add('active');
   });
 });
+
 const regionBtn = document.getElementById('regionBtn');
 const regionModal = document.getElementById('regionModal');
 const modalClose = document.getElementById('modalClose');
@@ -16,6 +17,7 @@ modalClose.addEventListener('click', () => regionModal.classList.remove('open'))
 regionModal.addEventListener('click', (e) => {
   if (e.target === regionModal) regionModal.classList.remove('open');
 });
+
 const burger = document.querySelector('.burger');
 const navPanel = document.querySelector('header nav');
 const overlay = document.querySelector('.nav-overlay');
@@ -35,13 +37,3 @@ function closeMenu() {
 burger.addEventListener('click', openMenu);
 navClose.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
-
-// touch-friendly dropdown: tap "Products"/"Company" to expand instead of hover
-document.querySelectorAll('.drop > span').forEach((trigger) => {
-  trigger.addEventListener('click', () => {
-    const parentLi = trigger.closest('.drop');
-    const wasOpen = parentLi.classList.contains('open');
-    document.querySelectorAll('.drop.open').forEach((el) => el.classList.remove('open'));
-    if (!wasOpen) parentLi.classList.add('open');
-  });
-});
