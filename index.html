@@ -6,6 +6,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css"/>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moniepoint</title>
@@ -453,11 +454,150 @@
         </div>
     </section>
 
+     <section class="split-carousel">
+ 
+      <!-- Top row — desktop avatars only -->
+      <div class="carousel-top">
+        <div class="carousel-top-left"></div>
+        <div class="carousel-top-right">
+          <div class="avatar-group">
+            <img src="https://img.youtube.com/vi/VPMcbBKTu-o/hqdefault.jpg" alt="" class="avatar"/>
+            <img src="https://img.youtube.com/vi/UkpSnqfB7VA/hqdefault.jpg" alt="" class="avatar"/>
+            <img src="https://img.youtube.com/vi/dAQt_Jf12_Q/hqdefault.jpg" alt="" class="avatar"/>
+            <img src="https://img.youtube.com/vi/SdVnlo5Opco/hqdefault.jpg" alt="" class="avatar"/>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Bottom row -->
+      <div class="carousel-bottom">
+ 
+        <!-- 1 — Left: title + desktop text + desktop buttons -->
+        <div class="carousel-left">
+ 
+          <!-- Title row — wraps title and mobile buttons -->
+          <div class="carousel-title-row">
+            <h2 class="carousel-title">Don't just take our <br/> words for it.</h2>
+            <!-- Mobile buttons — hidden on desktop -->
+            <div class="carousel-btns-mobile">
+              <button class="carousel-btn" id="prev-btn-m" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+              <button class="carousel-btn" id="next-btn-m" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+ 
+          <!-- Mobile avatars — hidden on desktop -->
+          <div class="avatar-group-mobile">
+            <img src="https://img.youtube.com/vi/VPMcbBKTu-o/hqdefault.jpg" alt="" class="avatar"/>
+            <img src="https://img.youtube.com/vi/UkpSnqfB7VA/hqdefault.jpg" alt="" class="avatar"/>
+            <img src="https://img.youtube.com/vi/dAQt_Jf12_Q/hqdefault.jpg" alt="" class="avatar"/>
+            <img src="https://img.youtube.com/vi/SdVnlo5Opco/hqdefault.jpg" alt="" class="avatar"/>
+          </div>
+ 
+          <!-- Desktop text slider -->
+          <div id="text-slider" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <p class="carousel-desc">I was robbed and found my shop open one fateful morning. I needed some money to cover up for the loss, and my business relationship manager mentioned the Moniepoint Loan to me. I needed it, and they gave me. Moniepoint has been a big help to my business.</p>
+                  <hr class="carousel-divider"/>
+                  <h3 class="carousel-sub-title">Mr Joseph</h3>
+                  <p class="carousel-sub-desc">Business Owner</p>
+                </li>
+                <li class="splide__slide">
+                  <p class="carousel-desc">Moniepoint is exceptional! Imagine someone walking into your store, and telling you they want to use Moniepoint. Moniepoint is, and has been the best.</p>
+                  <hr class="carousel-divider"/>
+                  <h3 class="carousel-sub-title">Mrs Nsisong</h3>
+                  <p class="carousel-sub-desc">Co-Founder, Uyai Beauty Hub</p>
+                </li>
+                <li class="splide__slide">
+                  <p class="carousel-desc">Using Moniepoint for the last few months has been pure bliss for us as a business. Our customers are able to come in and have seamless transactions done in seconds.</p>
+                  <hr class="carousel-divider"/>
+                  <h3 class="carousel-sub-title">Anita Ukpong</h3>
+                  <p class="carousel-sub-desc">Marketing Manager, The Good Beach</p>
+                </li>
+                <li class="splide__slide">
+                  <p class="carousel-desc">Moniepoint has empowered my staff to serve our customers better. It has also empowered our customers to get their transactions done quicker, and most importantly, aids seamless business.</p>
+                  <hr class="carousel-divider"/>
+                  <h3 class="carousel-sub-title">Tobi Hamilton</h3>
+                  <p class="carousel-sub-desc">Founder, The House</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+ 
+          <!-- Desktop buttons -->
+          <div class="carousel-btns">
+            <button class="carousel-btn" id="prev-btn" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="carousel-btn" id="next-btn" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+ 
+        </div>
+ 
+        <!-- 2 — Video -->
+        <div class="carousel-right">
+          <div id="video-slider" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <iframe src="https://www.youtube.com/embed/VPMcbBKTu-o?si=zfNwiELyAEsxVruM" allowfullscreen></iframe>
+                </li>
+                <li class="splide__slide">
+                  <iframe src="https://www.youtube.com/embed/UkpSnqfB7VA?si=KvDkq3P80QK6sev1" allowfullscreen></iframe>
+                </li>
+                <li class="splide__slide">
+                  <iframe src="https://www.youtube.com/embed/dAQt_Jf12_Q?si=YpoG6v1Gkv8xiVUW" allowfullscreen></iframe>
+                </li>
+                <li class="splide__slide">
+                  <iframe src="https://www.youtube.com/embed/SdVnlo5Opco?si=2UB4BHjMD7FwXbbp" allowfullscreen></iframe>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- 3 — Mobile text wrap — hidden on desktop, shown on mobile -->
+        <div class="carousel-text-wrap">
+          <div id="text-slider-mobile" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <p class="carousel-desc">I was robbed and found my shop open one fateful morning. I needed some money to cover up for the loss, and my business relationship manager mentioned the Moniepoint Loan to me. I needed it, and they gave me. Moniepoint has been a big help to my business.</p>
+                  <hr class="carousel-divider"/>
+                  <h3 class="carousel-sub-title">Mr Joseph</h3>
+                  <p class="carousel-sub-desc">Business Owner</p>
+                </li>
+                <li class="splide__slide">
+                  <p class="carousel-desc">Moniepoint is exceptional! Imagine someone walking into your store, and telling you they want to use Moniepoint. Moniepoint is, and has been the best.</p>
+                  <hr class="carousel-divider"/>
+                  <h3 class="carousel-sub-title">Mrs Nsisong</h3>
+                  <p class="carousel-sub-desc">Co-Founder, Uyai Beauty Hub</p>
+                </li>
+                <li class="splide__slide">
+                  <p class="carousel-desc">Using Moniepoint for the last few months has been pure bliss for us as a business. Our customers are able to come in and have seamless transactions done in seconds.</p>
+                  <hr class="carousel-divider"/>
+                  <h3 class="carousel-sub-title">Anita Ukpong</h3>
+                  <p class="carousel-sub-desc">Marketing Manager, The Good Beach</p>
+                </li>
+                <li class="splide__slide">
+                  <p class="carousel-desc">Moniepoint has empowered my staff to serve our customers better. It has also empowered our customers to get their transactions done quicker, and most importantly, aids seamless business.</p>
+                  <hr class="carousel-divider"/>
+                  <h3 class="carousel-sub-title">Tobi Hamilton</h3>
+                  <p class="carousel-sub-desc">Founder, The House</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </section>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
