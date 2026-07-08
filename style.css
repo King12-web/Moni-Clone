@@ -4,9 +4,12 @@
   box-sizing: border-box;
 }
 body {
-  background: #f5f8fc;
+  background: yellow;
   overflow-x: hidden;
   /* min-height: 100vh; */
+}
+.bolu {
+  background-color: #f8fafd;
 }
 
 /* ===== Cookie policy bar ===== */
@@ -639,6 +642,7 @@ nav {
   padding: 0 1.25rem;
   padding: 5rem 1.25rem;
   min-height: auto; /* let content decide height */
+  background-color: #f8fafd;
 }
 .head-child {
   text-align: center;
@@ -652,7 +656,7 @@ nav {
   position: sticky;
   top: calc(8vh + 70px);
   z-index: 899;
-  background: #ffffff;
+  background: #f8fafd;
   backdrop-filter: blur(10px);
   display: flex;
   gap: 10px;
@@ -683,7 +687,7 @@ nav {
 .Full-section {
   width: 100%;
   overflow: hidden;
-  background-color: #f6f8fc;
+  background-color: #f8fafd;
 }
 .sticky-child1 {
   /* border: 1px solid blue; */
@@ -692,6 +696,7 @@ nav {
   align-items: center;
   gap: 3rem;
   margin-top: 30px;
+  /* background-color: #f8fafd; */
 }
 .child1i {
   flex: 1;
@@ -744,7 +749,7 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 4rem 2rem;
-  background: #f6f9fc;
+  /* background: #f6f9fc; */
   overflow: hidden;
 }
 
@@ -906,6 +911,94 @@ nav {
 }
 .carousel-text-wrap {
   display: none;
+}
+
+.last {
+  background-color: #f8fafd;
+  width: 100%;
+  min-height: 100dvh;
+  padding: 15px;
+  padding-top: 120px;
+}
+.last-1 {
+  display: flex;
+  gap: 250px;
+  margin-left: 25px;
+}
+.last-1 h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #092256;
+}
+.last-1 p {
+  font-size: 22px;
+  font-weight: 500;
+  color: #3e588e;
+}
+.last-2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+.last-2 div {
+  flex: 1;
+  min-height: 300px;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #ffffff;
+}
+.last-3 {
+  display: flex;
+  gap: 50px;
+}
+.last-3 div {
+  min-height: 200px;
+  border-radius: 10px;
+  margin-left: 25px;
+  margin-top: 100px;
+}
+.last-3 img {
+  height: 60px;
+}
+.sub-div {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: auto;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-top: -70px;
+}
+.sub-div div {
+  min-height: 200px;
+  background-color: #f8fafd;
+  min-width: 400px;
+  flex-shrink: 0;
+}
+.last-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.last-4 button {
+  padding: 5px;
+  width: 200px;
+  background-color: #092256;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 /* ===== Responsive breakpoints ===== */
 
@@ -1251,5 +1344,104 @@ nav {
 
   .img-txt {
     display: none;
+  }
+  .last {
+    padding: 20px;
+    padding-top: 80px;
+  }
+
+  /* last-1: aligned left */
+  .last-1 {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 12px;
+    margin-left: 0;
+  }
+  .last-1 h2 {
+    font-size: 22px;
+  }
+  .last-1 p {
+    font-size: 16px !important;
+  }
+
+  /* last-2: boxes vertical */
+  .last-2 {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .last-2 div {
+    min-height: auto;
+    padding: 20px;
+  }
+  .last-2 img {
+    width: 40px;
+    height: 40px;
+  }
+  .last-2 h3 {
+    font-size: 18px !important;
+    margin-top: 20px !important;
+  }
+  .last-2 p {
+    font-size: 16px !important;
+  }
+
+  /* last-3: first div aligned left, image hidden */
+  .last-3 {
+    flex-direction: column;
+    gap: 0;
+  }
+  .last-3 div {
+    margin-left: 0;
+    margin-top: 20px;
+    min-height: auto;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .last-3 h2 {
+    font-size: 26px !important;
+  }
+  .last-3 p {
+    font-size: 16px !important;
+  }
+  .last-3 img {
+    display: none;
+  }
+
+  /* sub-div: first (empty) div hidden, remaining 4 aligned vertically */
+  .sub-div {
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 12px;
+    overflow-x: visible;
+  }
+  .sub-div > div:first-child {
+    display: none;
+  }
+  .sub-div div {
+    min-width: 100%;
+    min-height: auto;
+    padding: 20px;
+  }
+  .sub-div h3 {
+    font-size: 18px !important;
+  }
+  .sub-div p {
+    font-size: 14px !important;
+  }
+
+  /* last-4: keep side-by-side, just resize to fit mobile */
+  .last-4 {
+    gap: 10px !important;
+  }
+  .last-4 button {
+    width: auto !important;
+    flex: 1 !important;
+    max-width: 160px !important;
+    font-size: 11px !important;
+    padding: 8px 4px !important;
+  }
+  .last-4 button i {
+    font-size: 22px !important;
   }
 }
