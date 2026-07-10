@@ -3,10 +3,56 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Modern browsers — Chrome 121+, Edge 121+, Firefox, Safari 18.2+ */
+* {
+  scrollbar-width: 20px;
+  scrollbar-color: #3b82f6 #dbeafe;
+}
+
+/* Legacy WebKit — older Chrome/Edge/Safari, radius, borders & shadows */
+*::-webkit-scrollbar {
+  width: 20px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #dbeafe;
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #bfdbfe;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #93c5fd;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+  border-radius: 10px;
+  min-height: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #2563eb;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #1d4ed8;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+
 body {
   background-color: #f8fafd;
   overflow-x: hidden;
-  /* min-height: 100vh; */
 }
 .bolu {
   background-color: #f8fafd;
@@ -22,7 +68,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 35px;
-  z-index: 1000;
+  z-index: 1160;
   position: fixed;
   width: 100%;
   padding: 10px 16px;
@@ -58,7 +104,7 @@ header {
   top: 8vh;
   width: 100%;
   height: 70px;
-  z-index: 900;
+  z-index: 1060;
   background: #031335;
   padding: 0 clamp(12px, 3vw, 20px);
   display: flex;
@@ -167,6 +213,13 @@ nav {
   flex-direction: column;
   padding: 20px;
 }
+.dropdown-1 {
+  pointer-events: none;
+}
+ 
+.drop-1:hover .dropdown-1 {
+  pointer-events: auto;
+}
 .dropdown-1 a {
   text-decoration: none;
   color: #031335;
@@ -182,12 +235,17 @@ nav {
   border-radius: 10px;
 }
 .dropdown-1 i {
-  width: 27px;
+   width: 27px;
   height: 27px;
   border-radius: 8px;
   flex-shrink: 0;
   margin-top: 2px;
   background-color: #236cf0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
 }
 .fa-bag-shopping {
   display: flex;
@@ -397,70 +455,31 @@ nav {
   height: 18px;
 }
 
-/* ===== Region modal ===== */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(3, 19, 53, 0.5);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-.modal-overlay.open {
-  display: flex;
-}
-.modal-box {
-  background: #fff;
+/* Region modal — styles for the Bootstrap modal markup */
+/* Replaces the old .modal-overlay / .modal-box / .modal-head / .modal-close / .region-list rules */
+
+.rcm-modal-content {
   border-radius: 16px;
-  width: 320px;
-  max-width: 100%;
-  padding: 20px;
-}
-.modal-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 15px;
-  font-weight: 600;
-  color: #031335;
-  margin-bottom: 14px;
-}
-.modal-close {
-  background: none;
   border: none;
-  font-size: 20px;
-  line-height: 1;
-  cursor: pointer;
-  color: #7a8290;
+  padding: 4px;
 }
-.region-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.region-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  color: #031335;
-  padding: 10px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.region-list li:hover {
-  background: #f1f3f6;
-}
-.region-list img {
-  width: 20px;
-  height: 20px;
+
+.rcm-flag-img {
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
+}
+
+.list-group-item.active {
+  background-color: #eaf1fd;
+  color: #1a5fd0;
+  border-color: transparent;
+}
+
+.list-group-item:not(.active):hover {
+  background-color: #f5f6f8;
 }
 
 /* ===== Hero ===== */
@@ -659,7 +678,7 @@ nav {
   position: sticky;
   top: calc(8vh + 70px);
   z-index: 899;
-  background: #f8fafd;
+  background: #ffffff;
   backdrop-filter: blur(10px);
   display: flex;
   gap: 10px;
@@ -698,7 +717,7 @@ nav {
   font-family: Arial;
   font-weight: 500;
 }
-.Full-section {
+.full-section {
   width: 100%;
   overflow: hidden;
   background-color: #f8fafd;
@@ -1433,7 +1452,7 @@ footer img {
 @media (max-width: 960px) {
   nav,
   .toggle {
-    display: none;
+    display: none; /* JS will override with .open on header nav */
   }
   .burger {
     display: block;
@@ -1450,13 +1469,6 @@ footer img {
   }
   .hero-ii {
     order: 2;
-  }
-  nav,
-  .toggle {
-    display: none; /* keep this — JS will override with .open */
-  }
-  .burger {
-    display: block;
   }
 
   header nav {
@@ -1485,8 +1497,13 @@ footer img {
     gap: 4px;
   }
 
+  .nav-links li {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .nav-close {
-    display: block; /* or flex, either works here since it's just an X */
+    display: block;
     align-self: flex-end;
     background: none;
     border: none;
@@ -1513,21 +1530,26 @@ footer img {
   .drop.open .dropdown.mega {
     display: flex;
   }
+
+  /* Products categories: horizontal pill row on mobile, tap to switch panel */
   .mega-left {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
-    gap: 2px;
+    gap: 8px;
   }
 
   .mega-left .cat {
-    padding: 8px 12px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.05);
+    flex: 0 0 auto;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .mega-left .cat strong {
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 500;
   }
 
   .mega-left .cat p {
@@ -1536,15 +1558,13 @@ footer img {
 
   .mega-left .cat:hover,
   .mega-left .cat.active {
-    background: rgba(255, 255, 255, 0.12);
+    background: #236cf0;
   }
 
   .mega-right {
     border-left: none;
     padding-left: 0;
-    margin-top: 4px;
-    padding-left: 12px;
-    border-left: 2px solid rgba(255, 255, 255, 0.15);
+    margin-top: 12px;
   }
 
   .prod-item .txt strong,
@@ -1568,6 +1588,7 @@ footer img {
     border-radius: 0;
     border-left: 2px solid rgba(255, 255, 255, 0.15);
     margin: 4px 0 8px;
+    pointer-events: auto;
   }
 
   .drop-1.open .dropdown-1 {
@@ -1657,24 +1678,20 @@ footer img {
     padding: 2rem 1.25rem;
   }
 
-  /* Hide desktop top row */
   .carousel-top {
     display: none;
   }
 
-  /* Stack all columns */
   .carousel-bottom {
     flex-direction: column;
     gap: 1.5rem;
   }
 
-  /* 1 — title + buttons + avatars */
   .carousel-left {
     order: 1;
     width: 100%;
   }
 
-  /* Hide desktop text inside carousel-left */
   .carousel-left #text-slider {
     display: none;
   }
@@ -1682,7 +1699,6 @@ footer img {
     display: none;
   }
 
-  /* Title row — title left, buttons right */
   .carousel-title-row {
     display: flex;
     align-items: center;
@@ -1696,14 +1712,12 @@ footer img {
     padding-right: 1rem;
   }
 
-  /* Show mobile buttons */
   .carousel-btns-mobile {
     display: flex;
     gap: 8px;
     flex-shrink: 0;
   }
 
-  /* Show mobile avatars */
   .avatar-group-mobile {
     display: flex;
     gap: 12px;
@@ -1715,14 +1729,12 @@ footer img {
     height: 50px;
   }
 
-  /* 2 — video */
   .carousel-right {
     order: 2;
     width: 100%;
     margin-top: 0;
   }
 
-  /* 3 — text content below video */
   .carousel-text-wrap {
     display: block;
     order: 3;
@@ -1801,7 +1813,7 @@ footer img {
   .foot > div:first-child {
     grid-column: 1 / -1;
   }
-  .help{
+  .help {
     display: none;
   }
 }

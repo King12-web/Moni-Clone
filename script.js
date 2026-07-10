@@ -13,17 +13,39 @@ document.querySelectorAll(".mega-left .cat").forEach((cat) => {
       .classList.add("active");
   });
 });
+/* Add this to your script.js. It replaces the need for hover on mobile:
+   tapping "Products" or "Company" toggles their dropdown open/closed,
+   and tapping a category pill inside Products switches the active panel. */
 
-const regionBtn = document.getElementById("regionBtn");
-const regionModal = document.getElementById("regionModal");
-const modalClose = document.getElementById("modalClose");
+document.querySelectorAll(".drop > span, .drop-1 > span").forEach((trigger) => {
+  trigger.addEventListener("click", (e) => {
+    if (window.innerWidth > 960) return; // desktop keeps using :hover
+    e.preventDefault();
+    const parent = trigger.parentElement;
+    const wasOpen = parent.classList.contains("open");
 
-regionBtn.addEventListener("click", () => regionModal.classList.add("open"));
-modalClose.addEventListener("click", () =>
-  regionModal.classList.remove("open"),
-);
-regionModal.addEventListener("click", (e) => {
-  if (e.target === regionModal) regionModal.classList.remove("open");
+    document
+      .querySelectorAll(".drop.open, .drop-1.open")
+      .forEach((el) => el.classList.remove("open"));
+
+    if (!wasOpen) parent.classList.add("open");
+  });
+});
+
+document.querySelectorAll(".mega-left .cat").forEach((cat) => {
+  cat.addEventListener("click", () => {
+    const key = cat.dataset.cat;
+    document
+      .querySelectorAll(".mega-left .cat")
+      .forEach((c) => c.classList.remove("active"));
+    document
+      .querySelectorAll(".cat-panel")
+      .forEach((p) => p.classList.remove("active"));
+    cat.classList.add("active");
+    document
+      .querySelector(`.cat-panel[data-panel="${key}"]`)
+      .classList.add("active");
+  });
 });
 
 const burger = document.querySelector(".burger");

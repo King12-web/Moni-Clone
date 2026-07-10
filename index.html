@@ -250,7 +250,15 @@
           Sign in
           <i class="fa-solid fa-arrow-right"></i>
         </a>
-        <button class="region-btn" id="regionBtn" aria-label="Select region">
+
+        <!-- Region trigger: opens the Bootstrap modal below, no custom JS needed -->
+        <button
+          class="region-btn"
+          id="regionBtn"
+          aria-label="Select region"
+          data-bs-toggle="modal"
+          data-bs-target="#rcmModalHeader"
+        >
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -268,6 +276,7 @@
             style="color: white; font-size: 12px"
           ></i>
         </button>
+
         <button class="burger" aria-label="Open menu">
           <span></span>
           <span></span>
@@ -275,29 +284,70 @@
         </button>
       </div>
 
-      <!-- Region modal -->
-      <div class="modal-overlay" id="regionModal">
-        <div class="modal-box">
-          <div class="modal-head">
-            <span>Select Region/Country</span>
-            <button class="modal-close" id="modalClose">
-              <i class="fa-solid fa-x"></i>
-            </button>
+      <!-- Region modal — Bootstrap 5 handles open/close via data attributes, no custom JS -->
+      <div
+        class="modal fade"
+        id="rcmModalHeader"
+        tabindex="-1"
+        aria-labelledby="rcmModalHeaderLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content rcm-modal-content">
+            <div class="modal-header border-0 pb-0">
+              <h5 class="modal-title fw-semibold" id="rcmModalHeaderLabel">
+                Select Region/Country
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body pt-2">
+              <div class="list-group list-group-flush">
+                <button
+                  type="button"
+                  class="list-group-item list-group-item-action d-flex align-items-center gap-3 border-0 rounded-3 py-3"
+                  data-bs-dismiss="modal"
+                >
+                  <img
+                    src="https://moniepoint.com/flags/gb.svg"
+                    alt=""
+                    class="rcm-flag-img"
+                  />
+                  <span>Global</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="list-group-item list-group-item-action active d-flex align-items-center gap-3 border-0 rounded-3 py-3"
+                  data-bs-dismiss="modal"
+                >
+                  <img
+                    src="https://moniepoint.com/flags/nig.svg"
+                    alt=""
+                    class="rcm-flag-img"
+                  />
+                  <span class="fw-semibold">Nigeria</span>
+                </button>
+
+                <button
+                  type="button"
+                  class="list-group-item list-group-item-action d-flex align-items-center gap-3 border-0 rounded-3 py-3"
+                  data-bs-dismiss="modal"
+                >
+                  <img
+                    src="https://moniepoint.com/flags/ken.svg"
+                    alt=""
+                    class="rcm-flag-img"
+                  />
+                  <span>Kenya</span>
+                </button>
+              </div>
+            </div>
           </div>
-          <ul class="region-list">
-            <li>
-              <img src="https://moniepoint.com/flags/gb.svg" alt="" />
-              Global
-            </li>
-            <li>
-              <img src="https://moniepoint.com/flags/nig.svg" alt="" />
-              Nigeria
-            </li>
-            <li>
-              <img src="https://moniepoint.com/flags/ken.svg" alt="" />
-              Kenya
-            </li>
-          </ul>
         </div>
       </div>
     </header>
