@@ -672,7 +672,9 @@ nav {
   margin: 0 auto;
 }
 .section-tabs {
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .section-tabs.tabs-hidden {
@@ -1203,7 +1205,7 @@ nav {
 footer {
   background-color: #030b1d;
   width: 100%;
-  min-height: 100vh;
+  min-height: 150vh;
   padding-top: 60px;
   padding-left: 20px;
   padding-right: 20px;
@@ -1227,12 +1229,12 @@ footer img {
   font-size: 13px;
   font-weight: 500;
 }
-.foot h6{
+.foot h6 {
   font-size: 14px;
   font-weight: 500;
   color: #ffffff;
 }
-.foot-btn{
+.foot-btn {
   display: flex;
   gap: 25px;
 }
@@ -1252,6 +1254,127 @@ footer img {
   align-items: center;
   gap: 15px;
 }
+.foot-2 {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+  color: white;
+  margin-top: 40px;
+}
+.footi {
+  display: flex;
+  flex-direction: column;
+}
+.fa-youtube {
+  background-color: #777c856a;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  padding: 6px;
+}
+.fa-facebook {
+  background-color: #777c856a;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  padding: 6px;
+}
+.fa-instagram {
+  background-color: #777c856a;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  padding: 6px;
+}
+.fa-twitter {
+  background-color: #777c856a;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  padding: 6px;
+}
+.fa-linkedin {
+  background-color: #777c856a;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  padding: 6px;
+}
+.rcm-flag {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.rcm-flag-ng {
+  background: linear-gradient(
+    to right,
+    #008751 0%,
+    #008751 33.33%,
+    #ffffff 33.33%,
+    #ffffff 66.66%,
+    #008751 66.66%,
+    #008751 100%
+  );
+}
+
+.rcm-flag-ke {
+  background: linear-gradient(
+    to right,
+    #000000 0%,
+    #000000 33.33%,
+    #ffffff 33.33%,
+    #ffffff 66.66%,
+    #bb0000 66.66%,
+    #bb0000 100%
+  );
+}
+
+.rcm-flag-global {
+  background: #cfe8fb;
+  font-size: 13px;
+}
+
+.rcm-modal-content {
+  border-radius: 16px;
+  border: none;
+}
+
+.list-group-item.active {
+  background-color: #eaf1fd;
+  color: #1a5fd0;
+  border-color: transparent;
+}
+
+.list-group-item:not(.active):hover {
+  background-color: #f5f6f8;
+}
+.right-copy{
+  display: flex;
+  color: #b2b4bb;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 500;
+}
+.right-copy1{
+  display: flex;
+  gap: 60px;
+}
+.copy-boss{
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  color: #b2b4bb;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.8;
+}
 .help {
   position: fixed;
   bottom: 70px;
@@ -1261,6 +1384,7 @@ footer img {
   justify-content: center;
   gap: 10px;
   z-index: 450;
+  border-radius: 50%;
 }
 .cancel {
   width: 50px;
@@ -1273,6 +1397,11 @@ footer img {
   border-radius: 50%;
   font-size: 14px;
   cursor: pointer;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+.cancel:hover {
+  transform: rotate(90deg);
 }
 .help span {
   background: #f5f7f9;
@@ -1298,44 +1427,6 @@ footer img {
   cursor: pointer;
   z-index: 500;
 }
-
-/* ── Mobile ── */
-@media (max-width: 960px) {
-  .blogs {
-    padding: 2rem 1rem;
-  }
-  .mpic-card img {
-    height: 160px;
-  }
-  .mpic-card-title {
-    font-size: 14px;
-  }
-  .mpic-controls {
-    display: none;
-  }
-  .growing {
-    min-height: 40vh;
-    padding: 3rem 1.25rem;
-    align-items: center;
-    text-align: center;
-  }
-
-  .growing br {
-    display: none;
-  }
-
-  .growing h2 {
-    font-size: 20px;
-    max-width: 28ch;
-  }
-
-  .growing button {
-    width: 160px;
-    padding: 14px;
-    font-size: 13px;
-  }
-}
-
 /* ===== Responsive breakpoints ===== */
 
 /* Tablet and below: burger nav + hero stacks into a single column */
@@ -1663,6 +1754,55 @@ footer img {
 
   .blogs-1 p {
     font-size: 15px;
+  }
+  .blogs {
+    padding: 2rem 1rem;
+  }
+  .mpic-card img {
+    height: 160px;
+  }
+  .mpic-card-title {
+    font-size: 14px;
+  }
+  .mpic-controls {
+    display: none;
+  }
+  .growing {
+    min-height: 40vh;
+    padding: 3rem 1.25rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .growing br {
+    display: none;
+  }
+
+  .growing h2 {
+    font-size: 20px;
+    max-width: 28ch;
+  }
+
+  .growing button {
+    width: 160px;
+    padding: 14px;
+    font-size: 13px;
+  }
+  footer {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .foot {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .foot > div:first-child {
+    grid-column: 1 / -1;
+  }
+  .help{
+    display: none;
   }
 }
 
