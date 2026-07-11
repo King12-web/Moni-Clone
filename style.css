@@ -53,6 +53,7 @@
 body {
   background-color: #f8fafd;
   overflow-x: hidden;
+  background-color: #f8fafd;
 }
 .bolu {
   background-color: #f8fafd;
@@ -676,19 +677,22 @@ nav {
 }
 .section-tabs {
   position: sticky;
-  top: calc(8vh + 70px);
-  z-index: 899;
+  top: calc(9vh + 72px);
+  z-index: 900;
   background: #ffffff;
   backdrop-filter: blur(10px);
   display: flex;
   gap: 10px;
   /* border-bottom: 1px solid #1E2330; */
   padding: 15px;
-  width: 95%;
+  width: 85%;
   border-radius: 20px;
   height: 80px;
   box-shadow: 0 4px 20px rgba(201, 168, 76, 0.2);
   margin: 0 auto;
+}
+.section-bg{
+  background-color: #f8fafd;
 }
 .section-tabs {
   transition:
@@ -1393,6 +1397,44 @@ footer img {
   font-size: 12px;
   font-weight: 500;
   line-height: 1.8;
+}
+.foot-design p {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  display: table;
+}
+.foot-design p:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: width 0.5s;
+}
+.foot-design p:hover:before{
+  width: 100%;
+}
+.right-copy1 p{
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  /* display: table; */
+}
+.right-copy1 p:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: width 0.5s;
+}
+.right-copy1 p:hover:before{
+  width: 100%;
 }
 .help {
   position: fixed;
