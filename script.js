@@ -13,13 +13,10 @@ document.querySelectorAll(".mega-left .cat").forEach((cat) => {
       .classList.add("active");
   });
 });
-/* Add this to your script.js. It replaces the need for hover on mobile:
-   tapping "Products" or "Company" toggles their dropdown open/closed,
-   and tapping a category pill inside Products switches the active panel. */
 
 document.querySelectorAll(".drop > span, .drop-1 > span").forEach((trigger) => {
   trigger.addEventListener("click", (e) => {
-    if (window.innerWidth > 960) return; // desktop keeps using :hover
+    if (window.innerWidth > 960) return;
     e.preventDefault();
     const parent = trigger.parentElement;
     const wasOpen = parent.classList.contains("open");
@@ -86,7 +83,6 @@ const textSliderMobile = new Splide("#text-slider-mobile", {
 videoSlider.sync(textSlider);
 videoSlider.sync(textSliderMobile);
 
-// Desktop buttons
 document
   .getElementById("prev-btn")
   .addEventListener("click", () => videoSlider.go("<"));
@@ -94,7 +90,6 @@ document
   .getElementById("next-btn")
   .addEventListener("click", () => videoSlider.go(">"));
 
-// Mobile buttons
 document
   .getElementById("prev-btn-m")
   .addEventListener("click", () => videoSlider.go("<"));
@@ -122,7 +117,7 @@ document.getElementById("prev-btn-m").disabled = true;
 
 const totalSlides = 9;
 const perPage = 3;
-const totalPages = totalSlides; // 9 dots — one per slide
+const totalPages = totalSlides;
 
 const splide = new Splide("#mpic-splide", {
   type: "slide",
@@ -142,7 +137,6 @@ const splide = new Splide("#mpic-splide", {
   },
 });
 
-// Build 9 dots
 const dotsEl = document.getElementById("mpic-dots");
 for (let i = 0; i < totalSlides; i++) {
   const dot = document.createElement("button");
@@ -158,7 +152,6 @@ function updateDots(index) {
   });
 }
 
-// Button controls
 document
   .getElementById("mpic-prev")
   .addEventListener("click", () => splide.go("<"));
@@ -174,7 +167,6 @@ splide.on("moved", (i) => {
 
 splide.mount();
 
-// Initial state
 document.getElementById("mpic-prev").disabled = true;
 
 const tabBar = document.getElementById('section-tabs');
@@ -183,14 +175,10 @@ const fullSection = document.querySelector('.full-section');
 const tabBarObserver = new IntersectionObserver(
   ([entry]) => {
     if (entry.isIntersecting) {
-      // Still within (or above) the tabbed sections
       tabBar.classList.remove('tabs-hidden');
     } else if (entry.boundingClientRect.top < 0) {
-      // Scrolled past the bottom of the sections
       tabBar.classList.add('tabs-hidden');
     }
-    // if boundingClientRect.top > 0, section is below viewport (user scrolled
-    // above it, e.g. back to the very top) — leave it visible, don't hide
   },
   { threshold: 0 }
 );
