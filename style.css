@@ -209,11 +209,11 @@ nav {
 .dropdown-1 {
   pointer-events: none;
 }
-.dropdown-1 i:hover{
+.dropdown-1 i:hover {
   background-color: #347ef1;
   color: white;
 }
-.dropdown-1 a:hover{
+.dropdown-1 a:hover {
   color: #347ef1;
 }
 
@@ -524,7 +524,7 @@ nav {
   align-items: center;
   gap: 10px;
   background-color: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  /* border: 1px solid rgba(255, 255, 255, 0.15); */
   color: #ffffff;
   font-size: clamp(12px, 1.5vw, 14px);
   font-weight: 400;
@@ -1634,11 +1634,11 @@ footer img {
     display: none;
   }
 
-  .signin{
+  .signin {
     display: none;
   }
 
-  .region-btn{
+  .region-btn {
     display: none;
   }
 
@@ -1785,7 +1785,12 @@ footer img {
     padding: 2rem 1rem;
   }
   .mpic-card img {
-    height: 160px;
+    /* height: 160px; */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
   }
   .mpic-card-title {
     font-size: 14px;

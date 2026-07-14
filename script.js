@@ -1,3 +1,4 @@
+//products dropdown 
 document.querySelectorAll(".mega-left .cat").forEach((cat) => {
   cat.addEventListener("mouseenter", () => {
     const key = cat.dataset.cat;
@@ -13,7 +14,7 @@ document.querySelectorAll(".mega-left .cat").forEach((cat) => {
       .classList.add("active");
   });
 });
-
+//peoducts and company dropdown on mobile 
 document.querySelectorAll(".drop > span, .drop-1 > span").forEach((trigger) => {
   trigger.addEventListener("click", (e) => {
     if (window.innerWidth > 960) return;
@@ -44,7 +45,7 @@ document.querySelectorAll(".mega-left .cat").forEach((cat) => {
       .classList.add("active");
   });
 });
-
+//mobile burger menu 
 const burger = document.querySelector(".burger");
 const navPanel = document.querySelector("header nav");
 const overlay = document.querySelector(".nav-overlay");
@@ -64,7 +65,7 @@ function closeMenu() {
 burger.addEventListener("click", openMenu);
 navClose.addEventListener("click", closeMenu);
 overlay.addEventListener("click", closeMenu);
-
+//splide video carousel 
 const options = {
   type: "slide",
   perPage: 1,
@@ -114,7 +115,7 @@ textSliderMobile.mount();
 
 document.getElementById("prev-btn").disabled = true;
 document.getElementById("prev-btn-m").disabled = true;
-
+//blogs card splide carousel
 const totalSlides = 9;
 const perPage = 3;
 const totalPages = totalSlides;
@@ -168,7 +169,7 @@ splide.on("moved", (i) => {
 splide.mount();
 
 document.getElementById("mpic-prev").disabled = true;
-
+//section tabs hidden function
 const tabBar = document.getElementById('section-tabs');
 const fullSection = document.querySelector('.full-section');
 
