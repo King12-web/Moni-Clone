@@ -14,7 +14,7 @@ document.querySelectorAll(".mega-left .cat").forEach((cat) => {
       .classList.add("active");
   });
 });
-//peoducts and company dropdown on mobile 
+//products and company dropdown on mobile 
 document.querySelectorAll(".drop > span, .drop-1 > span").forEach((trigger) => {
   trigger.addEventListener("click", (e) => {
     if (window.innerWidth > 960) return;
