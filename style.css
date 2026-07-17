@@ -705,6 +705,19 @@ nav {
   transition: all 0.2s;
   white-space: nowrap;
 }
+.stab-active{
+  background-color: #b6daf1;
+  height: 40px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #092256;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
 .section-tabs a {
   font-size: 16px;
   font-family: Arial;
@@ -1479,7 +1492,6 @@ footer img {
   .hero-ii {
     order: 2;
   }
-
   header nav {
     display: flex;
     flex-direction: column;
